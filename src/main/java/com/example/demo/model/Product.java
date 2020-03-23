@@ -24,6 +24,7 @@ public class Product {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "store_id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private Store store;
 
@@ -51,11 +52,11 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public Store getStore() {
-        return store;
-    }
-
     public void setStore(Store store) {
         this.store = store;
+    }
+
+    public Store getStore() {
+        return store;
     }
 }

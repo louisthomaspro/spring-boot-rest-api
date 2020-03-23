@@ -7,7 +7,7 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "stores")
 public class Store {
-    
+
     @Id
     @GeneratedValue
     private Long id;

@@ -31,4 +31,4 @@ docker-compose up -d --build
 mvn spring-boot:run
 ```
 
-Navigate to http://localhost:8080/
+Postman Collection : https://www.getpostman.com/collections/1d102f52352716987f2d

@@ -4,7 +4,6 @@ import com.example.demo.exception.NotFoundException;
 import com.example.demo.model.Store;
 import com.example.demo.repository.StoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +21,11 @@ public class StoreController {
     @GetMapping("/stores")
     public List<Store> getAllStores(Pageable pageable) {
         return storeRepository.findAll();
+    }
+
+    @GetMapping("/stores/like/{name}")
+    public List<Store> storeNameLike(@PathVariable String name) {
+        return storeRepository.storeNameLike(name);
     }
 
     @GetMapping("/stores/{storeId}")

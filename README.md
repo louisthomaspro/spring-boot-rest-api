@@ -3,8 +3,8 @@
 This project is implementing :
 - Controllers
 - Models
+- ManyToOne relationship
 - Custom Queries
-- Custom notFoundException
 
 ## Environment
 

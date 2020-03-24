@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -22,10 +24,9 @@ public class Product {
 
     private Integer quantity;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "store_id")
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
     private Store store;
 
     public Long getId() {
